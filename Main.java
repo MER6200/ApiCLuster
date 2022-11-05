@@ -25,7 +25,7 @@ public class Main{
         clustering.setMin_quantity(3);
 
         Configuration config = new Configuration();
-        config.setResponse_type("geojson");
+        config.setResponse_type("json");
         config.setClustering(clustering);
         config.setRouting(routing);
 
@@ -254,10 +254,10 @@ public class Main{
 
         ArrayList<Cluster> clusters= root.getClusters();
         System.out.println(clusters);
-//        System.out.println(clusters.get(1).getIds());
-//        System.out.println(clusters.get(0).getCenter().getLon());
-//        System.out.println(clusters.get(1).getCenter().getLat());
-//        System.out.println(clusters.get(1).getCenter().getLon());
+        System.out.println(clusters.get(1).getIds());
+        System.out.println(clusters.get(0).getIds());
+//      System.out.println(clusters.get(1).getCenter().getLat());
+//      System.out.println(clusters.get(1).getCenter().getLon());
 
 
     }
