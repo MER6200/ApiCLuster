@@ -21,8 +21,6 @@ public class Main{
         fichier.read("inputClustering.xlsx");
         adr = fichier.getAdr();
 
-
-
         Routing routing = new Routing();
         routing.setCost_per_meter(1);
         routing.setCost_per_second(0);
@@ -34,7 +32,7 @@ public class Main{
         clustering.setMin_quantity(2);
 
         Configuration config = new Configuration();
-        config.setResponse_type("geojson");
+        config.setResponse_type("json");
         config.setClustering(clustering);
         config.setRouting(routing);
 
@@ -126,8 +124,21 @@ public class Main{
         }
 
         ArrayList<Cluster> clusters= root.getClusters();
-        System.out.println(clusters);
-        //System.out.println(clusters.get(0).);
+
+        for(int i=0;i<clusters.size();i++){
+            clusters.get(i).IdToAdr(customers);
+        }
+
+
+
+
+
+
+        System.out.println("Il y'a "+clusters.size()+ " clusters");
+        System.out.println(clusters.get(0).getAdr());
+        System.out.println(clusters.get(1).getAdr());
+
+        //System.out.println(clusters.get(0).getIds());
  //       System.out.println(clusters.get(0).getIds().);
 //      System.out.println(clusters.get(1).getCenter().getLat());
 //      System.out.println(clusters.get(1).getCenter().getLon());

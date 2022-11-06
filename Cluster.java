@@ -38,4 +38,31 @@ public class Cluster {
     public void setAdr(ArrayList<Address> adr) {
         this.adr = adr;
     }
+
+    // Je retransforme les ids en adresse car le json fourni uniquement les ids
+    public void IdToAdr(ArrayList<Customer> customers){
+
+            ArrayList<Address> tmp = new ArrayList<>();
+            for(int j=0;j<ids.size();j++){
+
+
+                for(int k = 0;k<customers.size();k++){
+                    if(ids.get(j).equals(customers.get(k).getId())){
+                        tmp.add(customers.get(k).getAddress());
+                    }
+                }
+            this.adr= tmp;
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
 }
