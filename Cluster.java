@@ -5,6 +5,7 @@ public class Cluster {
     public Center center;
     public double quantity;
     public ArrayList<String> ids;
+    public ArrayList<Address> adr;
 
     public Center getCenter() {
         return center;
@@ -28,5 +29,13 @@ public class Cluster {
 
     public void setIds(ArrayList<String> ids) {
         this.ids = ids;
+    }
+
+    public ArrayList<Address> getAdr() {
+        return adr;
+    }
+
+    public void setAdr(ArrayList<Address> adr) {
+        this.adr = adr;
     }
 }
