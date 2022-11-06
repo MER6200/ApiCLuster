@@ -22,13 +22,13 @@ public class Main{
         adr = fichier.getAdr();
 
         Routing routing = new Routing();
-        routing.setCost_per_meter(1);
+        routing.setCost_per_meter(2);
         routing.setCost_per_second(0);
         routing.setProfile("car");
 
         Clustering clustering = new Clustering();
         clustering.setNum_clusters(2);
-        clustering.setMax_quantity(6);
+        clustering.setMax_quantity(12);
         clustering.setMin_quantity(2);
 
         Configuration config = new Configuration();
@@ -137,12 +137,15 @@ public class Main{
         System.out.println("Il y'a "+clusters.size()+ " clusters");
         System.out.println(clusters.get(0).getAdr());
         System.out.println(clusters.get(1).getAdr());
-
-        //System.out.println(clusters.get(0).getIds());
- //       System.out.println(clusters.get(0).getIds().);
-//      System.out.println(clusters.get(1).getCenter().getLat());
-//      System.out.println(clusters.get(1).getCenter().getLon());
+        for(int i = 0;i<clusters.size();i++){
+            System.out.println("Cluster : "+i);
+            for(int j = 0;j<clusters.get(0).getAdr().size();j++){
+                System.out.println(clusters.get(i).getAdr().get(j).getLat() + " "+clusters.get(0).getAdr().get(j).getLon());
+            }
+        }
 
 
     }
+
+
 }

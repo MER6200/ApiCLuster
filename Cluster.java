@@ -52,17 +52,7 @@ public class Cluster {
                     }
                 }
             this.adr= tmp;
-
-
-
-        }
-
-
-
-
+            }
     }
-
-
-
 
 }
