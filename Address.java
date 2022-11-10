@@ -26,4 +26,6 @@ public class Address{
     public void setStreet_hint(String street_hint) {
         this.street_hint = street_hint;
     }
+
+
 }

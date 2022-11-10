@@ -7,6 +7,8 @@ public class Cluster {
     public ArrayList<String> ids;
     public ArrayList<Address> adr;
 
+
+
     public Center getCenter() {
         return center;
     }
@@ -54,5 +56,6 @@ public class Cluster {
             this.adr= tmp;
             }
     }
+
 
 }
